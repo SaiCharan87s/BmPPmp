@@ -23,12 +23,12 @@ public class ReservationController {
 	ReservationService rs;
 
 	@GetMapping("/viewBookingDetailsByReservationId")
-	public List<Reservation> viewBookingDetailsByReservationId(@RequestParam int reservation_id) {
+	public List<Reservation> viewBookingDetailsByReservationId(@RequestParam("id") int reservation_id) {
 		return rs.viewBookingDetailsByReservationId(reservation_id);
 	}
 
 	@GetMapping("/viewCurrentBookingByUserId")
-	public List<Reservation> viewCurrentBookingByUserId(@RequestParam String registered_email) {
+	public List<Reservation> viewCurrentBookingByUserId(@RequestParam("email") String registered_email) {
 		return rs.viewCurrentBookingByUserId(registered_email);
 
 	}

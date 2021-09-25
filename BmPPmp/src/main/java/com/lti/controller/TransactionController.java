@@ -28,16 +28,15 @@ public class TransactionController {
 		Transaction t = trans;
 		Integer tid = ts.addTransaction(t);
 		return tid;
-
 	}
 
 	@GetMapping("/viewTransactionDetailsByBookingId")
-	public List<Transaction> viewTransactionDetailsByTransactionID(@RequestParam int transaction_id) {
+	public List<Transaction> viewTransactionDetailsByTransactionID(@RequestParam("id") int transaction_id) {
 		return ts.viewTransactionDetailsByTransactionID(transaction_id);
 	}
 
 	@GetMapping("/viewCurrentTransactionByUserId")
-	public List<Transaction> viewCurrentTransactionByUserId(@RequestParam String registered_email) {
+	public List<Transaction> viewCurrentTransactionByUserId(@RequestParam("email") String registered_email) {
 		return ts.viewCurrentTransactionByUserId(registered_email);
 
 	}
