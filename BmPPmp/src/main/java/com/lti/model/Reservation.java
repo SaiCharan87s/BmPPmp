@@ -117,6 +117,4 @@ public class Reservation {
 				+ journey_Id + ", departure_Date=" + departure_Date + ", reservation_Date=" + reservation_Date + "]";
 	}
 	
-	
-
 }
