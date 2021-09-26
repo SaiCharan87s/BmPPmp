@@ -54,5 +54,42 @@ public class BusSeatDetailsServiceImpl implements BusSeatDetailsService {
 		}
 	}
 
+	@Override
+	public void updateBusSeatesDetails(int rID, int jID, String s_no) {
+		System.out.println("updateBusSeatesDetails() calling........");
+		
+		try {
+			busSeatDetailsDao.updateBusSeatesDetails(rID,jID,s_no);
+		System.out.println("ReservationId in BusSeatesDetails Updated");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public void updateBusSeatesDetailsListSeat(int rID, int jID, List<String> seat_no) {
+		System.out.println("updateBusSeatesDetailsListSeat() calling...");
+		try {
+			busSeatDetailsDao.updateBusSeatesDetailsListSeat(rID,jID,seat_no);
+			System.out.println("ReservationId in BusSeatesDetails Updated");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public void decreaseSeatCount(int jID, int rID) {
+		System.out.println("SeatCountDecrease");
+		 
+		busSeatDetailsDao.decreaseSeatCount(jID, rID);
+	 System.out.println("Seats Count Decreased");
+		
+	}
+	
+
 
 }
