@@ -21,107 +21,107 @@ public class JourDetailsDaoImpl implements JourDetailsDao {
 	public JourDetailsDaoImpl() 
 
 		{
-			System.out.println("BusJourneyDetailsRepositoryImpl()..Created...");
+			System.out.println("JourDetailsRepositoryImpl()..Created...");
 		}
 
 //		@Transactional
-//		public List<BusJourneyDetails> selectAllBusJourneyDetails() {
+//		public List<JourDetails> selectAllJourDetails() {
 //			// TODO Auto-generated method stub
 //			EntityManager entityManager = getEntityManager();
 //
-//			Query query = entityManager.createQuery("from BusJourneyDetails");
-//			List<BusJourneyDetails> busJourneyDetailsList = query.getResultList();
-//			System.out.println("busDetailsList " + busJourneyDetailsList.size());
+//			Query query = entityManager.createQuery("from JourDetails");
+//			List<JourDetails> JourDetailsList = query.getResultList();
+//			System.out.println("busDetailsList " + JourDetailsList.size());
 //
-//			return busJourneyDetailsList;
+//			return JourDetailsList;
 //		}
 //
 //		@Transactional
-//		public BusJourneyDetails selectBusJourneyDetails(int journey_id) throws BusJourneyDetailsNotFoundException {
+//		public JourDetails selectJourDetails(int journey_id) throws JourDetailsNotFoundException {
 //			// TODO Auto-generated method stub
 //			System.out.println("inside selectbusjourney...");
 //			EntityManager entityManager = getEntityManager();
-//			return entityManager.find(BusJourneyDetails.class, journey_id);// based on PK
+//			return entityManager.find(JourDetails.class, journey_id);// based on PK
 //
 //		}
 //
 //		@Transactional
-//		public List<BusJourneyDetails> selectBusJourneyDetailsbyDepartureTime(String departure_Time)
-//				throws BusJourneyDetailsNotFoundException {
+//		public List<JourDetails> selectJourDetailsbyDepartureTime(String departure_Time)
+//				throws JourDetailsNotFoundException {
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager
-//					.createQuery("select j from BusJourneyDetails j where j.departure_Time = :vdeparture_Time");
+//					.createQuery("select j from JourDetails j where j.departure_Time = :vdeparture_Time");
 //			query.setParameter("vdeparture_Time", departure_Time);
-//			List<BusJourneyDetails> busJourneyDetailsbyDepartureTime = query.getResultList();
-//			return busJourneyDetailsbyDepartureTime;
+//			List<JourDetails> JourDetailsbyDepartureTime = query.getResultList();
+//			return JourDetailsbyDepartureTime;
 //		}
 //
 //		@Transactional
-//		public List<BusJourneyDetails> selectBusJourneyDetailsbyArrivalTime(String arrival_Time)
-//				throws BusJourneyDetailsNotFoundException {
+//		public List<JourDetails> selectJourDetailsbyArrivalTime(String arrival_Time)
+//				throws JourDetailsNotFoundException {
 //			// TODO Auto-generated method stub
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager
-//					.createQuery("select j from BusJourneyDetails j where j.arrival_Time = :varrival_Time");
+//					.createQuery("select j from JourDetails j where j.arrival_Time = :varrival_Time");
 //			query.setParameter("varrival_Time", arrival_Time);
-//			List<BusJourneyDetails> busJourneyDetailsbyArrivalTime = query.getResultList();
-//			return busJourneyDetailsbyArrivalTime;
+//			List<JourDetails> JourDetailsbyArrivalTime = query.getResultList();
+//			return JourDetailsbyArrivalTime;
 //		}
 //
 //		@Transactional
-//		public List<BusJourneyDetails> selectBusJourneyDetailsbySourceLocation(String source_loc)
-//				throws BusJourneyDetailsNotFoundException {
+//		public List<JourDetails> selectJourDetailsbySourceLocation(String source_loc)
+//				throws JourDetailsNotFoundException {
 //			// TODO Auto-generated method stub
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager
-//					.createQuery("select j from BusJourneyDetails j where j.source_loc = :vsource_loc");
+//					.createQuery("select j from JourDetails j where j.source_loc = :vsource_loc");
 //			query.setParameter("vsource_loc", source_loc);
-//			List<BusJourneyDetails> busJourneyDetailsbysource_loc = query.getResultList();
-//			return busJourneyDetailsbysource_loc;
+//			List<JourDetails> JourDetailsbysource_loc = query.getResultList();
+//			return JourDetailsbysource_loc;
 //		}
 //
 //		@Transactional
-//		public List<BusJourneyDetails> selectBusJourneyDetailsbyDestinationLocation(String destination_loc)
-//				throws BusJourneyDetailsNotFoundException {
+//		public List<JourDetails> selectJourDetailsbyDestinationLocation(String destination_loc)
+//				throws JourDetailsNotFoundException {
 //			// TODO Auto-generated method stub
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager
-//					.createQuery("select j from BusJourneyDetails j where j.destination_loc = :vdestination_loc");
+//					.createQuery("select j from JourDetails j where j.destination_loc = :vdestination_loc");
 //			query.setParameter("vdestination_loc", destination_loc);
-//			List<BusJourneyDetails> busJourneyDetailsbydestinationLoc = query.getResultList();
-//			return busJourneyDetailsbydestinationLoc;
+//			List<JourDetails> JourDetailsbydestinationLoc = query.getResultList();
+//			return JourDetailsbydestinationLoc;
 //		}
 //
 //		@Transactional
-//		public List<BusJourneyDetails> selectBusJourneyDetailsbyDepartureDate(Date departure_date)
-//				throws BusJourneyDetailsNotFoundException {
+//		public List<JourDetails> selectJourDetailsbyDepartureDate(Date departure_date)
+//				throws JourDetailsNotFoundException {
 //			// TODO Auto-generated method stub
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager
-//					.createQuery("select j from BusJourneyDetails j where j.departure_date = :vdeparture_date");
+//					.createQuery("select j from JourDetails j where j.departure_date = :vdeparture_date");
 //			query.setParameter("vdeparture_date", departure_date);
-//			List<BusJourneyDetails> busJourneyDetailsbydeparture_date = query.getResultList();
-//			return busJourneyDetailsbydeparture_date;
+//			List<JourDetails> JourDetailsbydeparture_date = query.getResultList();
+//			return JourDetailsbydeparture_date;
 //		}
 //
 //		@Transactional
-//		public List<BusJourneyDetails> selectBusJourneyDetailsbyJourneyID(int journeyID)
-//				throws BusJourneyDetailsNotFoundException {
+//		public List<JourDetails> selectJourDetailsbyJourneyID(int journeyID)
+//				throws JourDetailsNotFoundException {
 //			// TODO Auto-generated method stub
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager
-//					.createQuery("select j from BusJourneyDetails j where j.journeyID = :vjourneyID");
+//					.createQuery("select j from JourDetails j where j.journeyID = :vjourneyID");
 //			query.setParameter("vjourneyID", journeyID);
-//			List<BusJourneyDetails> busJourneyDetailsbyjourneyID = query.getResultList();
-//			return busJourneyDetailsbyjourneyID;
+//			List<JourDetails> JourDetailsbyjourneyID = query.getResultList();
+//			return JourDetailsbyjourneyID;
 //		}
 //
 //		@Transactional
-//		public int selectAvailableSeates(String busNo, int journeyId) throws BusJourneyDetailsNotFoundException {
+//		public int selectAvailableSeates(String busNo, int journeyId) throws JourDetailsNotFoundException {
 //			// TODO Auto-generated method stub
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager.createQuery(
-//					"select b from BusJourneyDetails b where b.bus_no = : vbus_no and b.journey_ID = : v_journeyID");
+//					"select b from JourDetails b where b.bus_no = : vbus_no and b.journey_ID = : v_journeyID");
 //			query.setParameter("vbus_no", busNo);
 //			query.setParameter("v_journeyID", journeyId);
 //			int seates = query.getFirstResult();
@@ -134,12 +134,12 @@ public class JourDetailsDaoImpl implements JourDetailsDao {
 ////			// TODO Auto-generated method stub
 ////			boolean res=false;
 ////			EntityManager entityManager = getEntityManager();
-////			BusJourneyDetails busJourneyDetails=entityManager.find(BusJourneyDetails.class, journeyId );
-////			if (busJourneyDetails!=null)
+////			JourDetails JourDetails=entityManager.find(JourDetails.class, journeyId );
+////			if (JourDetails!=null)
 ////			{
-////				busJourneyDetails.setSource_loc(source);
-////				busJourneyDetails.setDestination_loc(destination);
-////				entityManager.persist(busJourneyDetails);	
+////				JourDetails.setSource_loc(source);
+////				JourDetails.setDestination_loc(destination);
+////				entityManager.persist(JourDetails);	
 ////				res=true;
 ////			}
 ////			return res;
@@ -148,7 +148,7 @@ public class JourDetailsDaoImpl implements JourDetailsDao {
 //		public void decreaseSeatCount(int jID, int rID) {
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager.createQuery(
-//					"update BusJourneyDetails b set b.available_seates = ((select s.available_seates from BusJourneyDetails s where s.journeyID = :jID) - (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID)) where b.journeyID = :jID")
+//					"update JourDetails b set b.available_seates = ((select s.available_seates from JourDetails s where s.journeyID = :jID) - (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID)) where b.journeyID = :jID")
 //					.setParameter("jID", jID).setParameter("rID", rID);
 //			query.executeUpdate();
 //		}
@@ -157,24 +157,24 @@ public class JourDetailsDaoImpl implements JourDetailsDao {
 //		public void changeAvailableSeats(int jID, int rID) throws NumberNotFoundException {
 //			EntityManager entityManager = getEntityManager();
 //			Query query = entityManager.createQuery(
-//					"update BusJourneyDetails b set b.available_seates = (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID) + b.available_seates where b.journeyID = :jID")
+//					"update JourDetails b set b.available_seates = (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID) + b.available_seates where b.journeyID = :jID")
 //					.setParameter("jID", jID).setParameter("rID", rID);
 //			query.executeUpdate();
 //		}
 
 	@Override
 	@Transactional
-	public List<JourDetails> selectAllBusJourneyDetails() {
+	public List<JourDetails> selectAllJourDetails() {
 		// TODO Auto-generated method stub
-		Query query = entityManager.createQuery("from BusJourneyDetails");
-		List<JourDetails> busJourneyDetailsList = query.getResultList();
-		System.out.println("busDetailsList " + busJourneyDetailsList.size());
-		return busJourneyDetailsList;
+		Query query = entityManager.createQuery("from JourDetails");
+		List<JourDetails> JourDetailsList = query.getResultList();
+		System.out.println("busDetailsList " + JourDetailsList.size());
+		return JourDetailsList;
 	}
 
 	@Override
 	@Transactional
-	public JourDetails selectBusJourneyDetails(int journey_id) throws JourDetailsException {
+	public JourDetails selectJourDetails(int journey_id) throws JourDetailsException {
 		// TODO Auto-generated method stub
 		System.out.println("inside selectbusjourney...");
 		return entityManager.find(JourDetails.class, journey_id);
@@ -182,39 +182,39 @@ public class JourDetailsDaoImpl implements JourDetailsDao {
 
 	@Override
 	@Transactional
-	public List<JourDetails> selectBusJourneyDetailsbySourceLocation(String sourceLoc)
+	public List<JourDetails> selectJourDetailsbySourceLocation(String sourceLoc)
 		throws JourDetailsException {
 
-			Query query = entityManager.createQuery("select j from BusJourneyDetails j where j.source_loc = :vsource_loc");
+			Query query = entityManager.createQuery("select j from JourDetails j where j.source_loc = :vsource_loc");
 			query.setParameter("vsource_loc", sourceLoc);
-			List<JourDetails>  busJourneyDetailsbysource_loc= query.getResultList();
-			return busJourneyDetailsbysource_loc;
+			List<JourDetails>  JourDetailsbysource_loc= query.getResultList();
+			return JourDetailsbysource_loc;
 	}
 
 	@Override
 	@Transactional
-	public List<JourDetails> selectBusJourneyDetailsbyDestinationLocation(String destinationLoc)
+	public List<JourDetails> selectJourDetailsbyDestinationLocation(String destinationLoc)
 			throws JourDetailsException {
-		Query query = entityManager.createQuery("select j from BusJourneyDetails j where j.destination_loc = :vdestination_loc");
+		Query query = entityManager.createQuery("select j from JourDetails j where j.destination_loc = :vdestination_loc");
 		query.setParameter("vdestination_loc", destinationLoc);
-		List<JourDetails>  busJourneyDetailsbydestinationLoc= query.getResultList();
-		return busJourneyDetailsbydestinationLoc;
+		List<JourDetails>  JourDetailsbydestinationLoc= query.getResultList();
+		return JourDetailsbydestinationLoc;
 	}
 	
 	
 	@Override
 	@Transactional
-	public List<JourDetails> selectBusJourneyDetailsbyJourneyID(int journeyId) throws JourDetailsException {
-		Query query = entityManager.createQuery("select j from BusJourneyDetails j where j.journeyID = :vjourneyID");
+	public List<JourDetails> selectJourDetailsbyJourneyID(int journeyId) throws JourDetailsException {
+		Query query = entityManager.createQuery("select j from JourDetails j where j.journeyID = :vjourneyID");
 		query.setParameter("vjourneyID", journeyId);
-		List<JourDetails>  busJourneyDetailsbyjourneyID= query.getResultList();
-		return  busJourneyDetailsbyjourneyID;
+		List<JourDetails>  JourDetailsbyjourneyID= query.getResultList();
+		return  JourDetailsbyjourneyID;
 	}
 
 	@Override
 	@Transactional
 	public int selectAvailableSeates(String busNo, int journeyId) throws JourDetailsException {
-		Query query = entityManager.createQuery("select b from BusJourneyDetails b where b.bus_no = : vbus_no and b.journey_ID = : v_journeyID");
+		Query query = entityManager.createQuery("select b from JourDetails b where b.bus_no = : vbus_no and b.journey_ID = : v_journeyID");
 		query.setParameter("vbus_no", busNo);
 		query.setParameter("v_journeyID", journeyId);
 		int seates=  query.getFirstResult();
@@ -225,7 +225,7 @@ public class JourDetailsDaoImpl implements JourDetailsDao {
 	@Override
 	@Transactional
 	public void changeAvailableSeats(int jID, int rID) throws NumberException {
-		Query query = entityManager.createQuery("update BusJourneyDetails b set b.available_seates = ((select s.available_seates from BusJourneyDetails s where s.journeyID = :jID) - (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID)) where b.journeyID = :jID").setParameter("jID",jID).setParameter("rID", rID);
+		Query query = entityManager.createQuery("update JourDetails b set b.available_seates = ((select s.available_seates from JourDetails s where s.journeyID = :jID) - (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID)) where b.journeyID = :jID").setParameter("jID",jID).setParameter("rID", rID);
 		query.executeUpdate();
 		}
 		
@@ -233,7 +233,7 @@ public class JourDetailsDaoImpl implements JourDetailsDao {
 	@Override
 	@Transactional
 	public void decreaseSeatCount(int jID, int rID) {
-		Query query = entityManager.createQuery("update BusJourneyDetails b set b.available_seates = (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID) + b.available_seates where b.journeyID = :jID").setParameter("jID",jID).setParameter("rID", rID);
+		Query query = entityManager.createQuery("update JourDetails b set b.available_seates = (select r.seats_Booked from ReservationDetails r where r.journey_Id = :jID and r.reservation_id = :rID) + b.available_seates where b.journeyID = :jID").setParameter("jID",jID).setParameter("rID", rID);
 		query.executeUpdate();
 		
 	}

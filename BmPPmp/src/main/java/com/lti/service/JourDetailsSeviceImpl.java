@@ -17,33 +17,33 @@ public class JourDetailsSeviceImpl implements JourDetailsService {
 	
 	
 	@Override
-	public List<JourDetails> selectAllBusJourneyDetails() {
+	public List<JourDetails> selectAllJourDetails() {
 		// TODO Auto-generated method stub
-		return jourDetailsDao.selectAllBusJourneyDetails();
+		return jourDetailsDao.selectAllJourDetails();
 	}
 
 	@Override
-	public JourDetails selectBusJourneyDetails(int journey_id) throws JourDetailsException {
+	public JourDetails selectJourDetails(int journey_id) throws JourDetailsException {
 		// TODO Auto-generated method stub
-		return jourDetailsDao.selectBusJourneyDetails(journey_id);
+		return jourDetailsDao.selectJourDetails(journey_id);
 	}
 
 	@Override
-	public List<JourDetails> selectBusJourneyDetailsbySourceLocation(String sourceLoc) throws JourDetailsException {
+	public List<JourDetails> selectJourDetailsbySourceLocation(String sourceLoc) throws JourDetailsException {
 		// TODO Auto-generated method stub
-		return jourDetailsDao.selectBusJourneyDetailsbySourceLocation(sourceLoc);
+		return jourDetailsDao.selectJourDetailsbySourceLocation(sourceLoc);
 	}
 
 	@Override
-	public List<JourDetails> selectBusJourneyDetailsbyDestinationLocation(String destinationLoc)
+	public List<JourDetails> selectJourDetailsbyDestinationLocation(String destinationLoc)
 			throws JourDetailsException {
-		return jourDetailsDao.selectBusJourneyDetailsbyDestinationLocation(destinationLoc);
+		return jourDetailsDao.selectJourDetailsbyDestinationLocation(destinationLoc);
 	}
 
 	@Override
-	public List<JourDetails> selectBusJourneyDetailsbyJourneyID(int journeyId) throws JourDetailsException {
+	public List<JourDetails> selectJourDetailsbyJourneyID(int journeyId) throws JourDetailsException {
 		// TODO Auto-generated method stub
-		return jourDetailsDao.selectBusJourneyDetailsbyJourneyID(journeyId);
+		return jourDetailsDao.selectJourDetailsbyJourneyID(journeyId);
 	}
 
 	@Override
@@ -66,10 +66,5 @@ public class JourDetailsSeviceImpl implements JourDetailsService {
 		}
 
 
-//	@Override
-//	public void decreaseSeatCount(int jID, int rID) {
-//		// TODO Auto-generated method stub
-//
-//	}
 
 }

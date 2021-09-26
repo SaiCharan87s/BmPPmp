@@ -55,11 +55,11 @@ public class BusSeatDetailsServiceImpl implements BusSeatDetailsService {
 	}
 
 	@Override
-	public void updateBusSeatesDetails(int rID, int jID, String s_no) {
+	public void updateBusSeatDetails(int rID, int jID, String s_no) {
 		System.out.println("updateBusSeatesDetails() calling........");
 		
 		try {
-			busSeatDetailsDao.updateBusSeatesDetails(rID,jID,s_no);
+			busSeatDetailsDao.updateBusSeatDetails(rID,jID,s_no);
 		System.out.println("ReservationId in BusSeatesDetails Updated");
 		}
 		catch(Exception e) {
@@ -80,16 +80,14 @@ public class BusSeatDetailsServiceImpl implements BusSeatDetailsService {
 		}
 		
 	}
-
+	
 	@Override
-	public void decreaseSeatCount(int jID, int rID) {
+	public	void decreaseSeatCount(int jID, int rID){
 		System.out.println("SeatCountDecrease");
-		 
-		busSeatDetailsDao.decreaseSeatCount(jID, rID);
+		jourDetailsDao.decreaseSeatCount(jID, rID);
 	 System.out.println("Seats Count Decreased");
 		
 	}
-	
 
 
 }
